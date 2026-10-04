@@ -16,7 +16,7 @@ Yerel sunucuyla açmak için: `npx serve -l 4182 .`
 
 ## Müşteriyle netleştirilecekler
 
-- **Logo:** Sitedeki amblem taslaktır (`gorseller/logo.svg`, `favicon.svg`). Firmanın kendi
+- **Logo:** Sitedeki iki renkli N amblemi taslaktır (`gorseller/logo.svg`, `favicon.svg`). Firmanın kendi
   logosu kullanılacaksa başlıktaki ve alt bilgideki `marka-amblem` SVG'si değiştirilir.
 - **İletişim bilgileri:** Telefon, adres, e-posta ve çalışma saatleri firmanın eski sitesinden
   (novahgk.com, şu an kapalı; 2021 arşiv kaydı) alındı. Güncel olmayabilir.

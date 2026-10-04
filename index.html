@@ -34,24 +34,23 @@
     <header class="baslik" id="ust">
       <div class="kapsayici baslik-ic">
         <a href="#ust" class="marka" aria-label="Nova HGK Yapı Denetim ana sayfa">
-          <svg class="marka-amblem" viewBox="0 0 48 48" aria-hidden="true">
-            <rect class="amblem-zemin" x="3" y="7" width="38" height="38" rx="3" />
-            <path class="amblem-harf" d="M11 38V14h5l12 15V14h5v24h-5L16 23v15Z" />
-            <path class="amblem-yildiz" d="M39 1c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7Z" />
+          <svg class="marka-amblem" viewBox="0 0 40 40" aria-hidden="true">
+            <path class="amblem-kol" d="M9 9 31 31V9" />
+            <path class="amblem-govde" d="M9 31V9" />
           </svg>
           <span class="marka-yazi">
-            <strong>NOVA HGK</strong>
-            <small>YAPI DENETİM</small>
+            <span class="marka-ad">NOVA<span>HGK</span></span>
+            <small>Yapı Denetim</small>
           </span>
         </a>
 
         <nav class="menu" aria-label="Ana menü">
-          <a href="#ust">Anasayfa</a>
+          <a href="#ust" data-izle="slayt">Ana Sayfa</a>
           <a href="#hakkimizda">Hakkımızda</a>
           <a href="#hizmetler">Hizmetler</a>
-          <a href="#yapilar">Yapılar</a>
+          <a href="#referanslar">Referanslar</a>
           <a href="#surec">Süreç</a>
-          <a href="#iletisim">İletişim</a>
+          <a href="#iletisim" class="menu-dugme">Bize Ulaşın</a>
         </nav>
 
         <button class="menu-ac" type="button" aria-label="Menüyü aç" aria-expanded="false">
@@ -62,7 +61,7 @@
 
     <main>
       <!-- Slayt: üç kare, kendiliğinden döner -->
-      <section class="slayt" aria-label="Öne çıkanlar">
+      <section class="slayt" id="slayt" aria-label="Öne çıkanlar">
         <div class="slayt-kare slayt-1 aktif">
           <div class="kapsayici slayt-yazi">
             <p class="slayt-ust">Nova HGK Yapı Denetim</p>
@@ -350,12 +349,11 @@
       <div class="kapsayici alt-ic">
         <div class="alt-hakkinda">
           <a href="#ust" class="marka" aria-label="Nova HGK Yapı Denetim">
-            <svg class="marka-amblem" viewBox="0 0 48 48" aria-hidden="true">
-              <rect class="amblem-zemin" x="3" y="7" width="38" height="38" rx="3" />
-              <path class="amblem-harf" d="M11 38V14h5l12 15V14h5v24h-5L16 23v15Z" />
-              <path class="amblem-yildiz" d="M39 1c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7Z" />
+            <svg class="marka-amblem" viewBox="0 0 40 40" aria-hidden="true">
+              <path class="amblem-kol" d="M9 9 31 31V9" />
+              <path class="amblem-govde" d="M9 31V9" />
             </svg>
-            <span class="marka-yazi"><strong>NOVA HGK</strong><small>YAPI DENETİM</small></span>
+            <span class="marka-yazi"><span class="marka-ad">NOVA<span>HGK</span></span><small>Yapı Denetim</small></span>
           </a>
           <p>
             Nova HGK Yapı Denetim Ltd. Şti. Ankara'da 4708 sayılı Kanun kapsamında yapı denetim
@@ -419,6 +417,20 @@
           acDugmesi.setAttribute('aria-expanded', 'false');
         }
       });
+
+      // Ekranın ortasındaki bölümün menü bağlantısını işaretle
+      const menuBaglantilari = [...menu.querySelectorAll('a:not(.menu-dugme)')];
+      const bolumGozlemci = new IntersectionObserver(
+        (girdiler) =>
+          girdiler.forEach((g) => {
+            if (!g.isIntersecting) return;
+            menuBaglantilari.forEach((a) =>
+              a.classList.toggle('secili', (a.dataset.izle || a.hash.slice(1)) === g.target.id),
+            );
+          }),
+        { rootMargin: '-45% 0px -50% 0px' },
+      );
+      document.querySelectorAll('.slayt, .bolum[id]').forEach((el) => bolumGozlemci.observe(el));
 
       // Sayfa kaydırılınca başlığa gölge ver
       const baslik = document.querySelector('.baslik');
