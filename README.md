@@ -3,9 +3,9 @@
 Nova HGK Yapı Denetim Ltd. Şti. için hazırlanan taslak site. Müşteriye tasarımı göstermek
 içindir, yayına hazır değildir.
 
-`insaat-ornek` deposundaki `01-kurumsal` şablonundan uyarlandı: koyu zemin, serif başlıklar,
-uzun tek sayfa. Renkler gece laciverti + kehribar olarak değiştirildi, içerik yapı denetime
-göre yeniden yazıldı.
+`insaat-ornek` deposundaki `01-kurumsal` şablonundan uyarlandı. Sayfa düzeni kurumsal inşaat
+sitelerine yaklaştırıldı: telefon şeridi, kayan slayt, sayaçlar, yuvarlak ikonlu hizmetler,
+fotoğraflı kartlar, WhatsApp düğmesi. Renkler gece laciverti + kehribar.
 
 ## Açma
 
@@ -20,8 +20,9 @@ Yerel sunucuyla açmak için: `npx serve -l 4182 .`
   logosu kullanılacaksa başlıktaki ve alt bilgideki `marka-amblem` SVG'si değiştirilir.
 - **İletişim bilgileri:** Telefon, adres ve e-posta firmanın eski sitesinin (novahgk.com,
   şu an kapalı) arama motoru kayıtlarından alındı. Güncel olmayabilir.
-- **Çalışma saatleri** tahminidir.
-- **Instagram** bağlantısı boş (`#`).
+- **"20+ yıllık tecrübe" sayacı:** Eski sitedeki "2004'ten beri" ifadesine dayanıyor, teyit edilmeli.
+- **WhatsApp düğmesi:** Numara belli olmadığı için şimdilik iletişim bölümüne iniyor.
+- **KVKK metni** yok, formdaki onay kutusu göstermelik.
 - **İletişim formu** bir yere bağlı değil, gönderince uyarı gösterir.
 
 ## Renkler
