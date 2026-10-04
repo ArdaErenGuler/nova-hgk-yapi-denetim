@@ -18,9 +18,10 @@ Yerel sunucuyla açmak için: `npx serve -l 4182 .`
 
 - **Logo:** Sitedeki amblem taslaktır (`gorseller/logo.svg`, `favicon.svg`). Firmanın kendi
   logosu kullanılacaksa başlıktaki ve alt bilgideki `marka-amblem` SVG'si değiştirilir.
-- **İletişim bilgileri:** Telefon, adres ve e-posta firmanın eski sitesinin (novahgk.com,
-  şu an kapalı) arama motoru kayıtlarından alındı. Güncel olmayabilir.
-- **"20+ yıllık tecrübe" sayacı:** Eski sitedeki "2004'ten beri" ifadesine dayanıyor, teyit edilmeli.
+- **İletişim bilgileri:** Telefon, adres, e-posta ve çalışma saatleri firmanın eski sitesinden
+  (novahgk.com, şu an kapalı; 2021 arşiv kaydı) alındı. Güncel olmayabilir.
+- **Rakamlar ve referanslar:** 2002 kuruluş yılı, 2.000.000 m² ve referans proje adları da eski
+  siteden. Firma güncel hâllerini vermeli.
 - **WhatsApp düğmesi:** Numara belli olmadığı için şimdilik iletişim bölümüne iniyor.
 - **KVKK metni** yok, formdaki onay kutusu göstermelik.
 - **İletişim formu** bir yere bağlı değil, gönderince uyarı gösterir.

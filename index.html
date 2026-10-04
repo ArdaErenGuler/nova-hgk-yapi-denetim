@@ -99,17 +99,17 @@
             <h2>Hakkımızda</h2>
           </div>
           <p>
-            Nova HGK Yapı Denetim Ltd. Şti. Ankara Çankaya'da faaliyet gösteren bir yapı denetim
-            firmasıdır. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'ndan izin belgemiz var ve
-            4708 sayılı Yapı Denetimi Hakkında Kanun'a göre çalışıyoruz.
+            Nova HGK Yapı Denetim 2002 yılında Ankara'da kuruldu. Çevre, Şehircilik ve İklim
+            Değişikliği Bakanlığı'ndan izin belgeli bir yapı denetim firmasıyız ve 4708 sayılı Yapı
+            Denetimi Hakkında Kanun'a göre çalışıyoruz.
           </p>
           <p>
             İşimiz, binanın ruhsat ekindeki projelere ve standartlara uygun yapılıp yapılmadığını
             kontrol etmek. Bunu müteahhitten bağımsız olarak, şantiyeye giderek yapıyoruz.
           </p>
           <p>
-            Ekibimizde mimar, inşaat mühendisi, makine mühendisi ve elektrik mühendisi var. Yapı
-            sahibine inşaatın durumu hakkında düzenli bilgi veriyoruz.
+            Ekibimizde mimar, inşaat mühendisi, makine mühendisi ve elektrik mühendisi var. Bugüne
+            kadar Ankara genelinde 2.000.000 m² inşaat alanının denetimini yaptık.
           </p>
           <a href="#iletisim" class="alt-cizgili">Bize ulaşın</a>
         </div>
@@ -119,8 +119,8 @@
       <section class="sayaclar" aria-label="Rakamlar">
         <div class="kapsayici sayac-satir">
           <div class="sayac"><strong data-hedef="20" data-ek="+">20+</strong><span>Yıllık<br />Tecrübe</span></div>
+          <div class="sayac"><strong data-hedef="2000000">2.000.000</strong><span>m² Denetlenen<br />İnşaat Alanı</span></div>
           <div class="sayac"><strong data-hedef="4">4</strong><span>Branşta<br />Proje Kontrolü</span></div>
-          <div class="sayac"><strong data-hedef="15">15</strong><span>Yıl Taşıyıcı Sistem<br />Sorumluluğu</span></div>
         </div>
       </section>
 
@@ -214,6 +214,25 @@
         </div>
       </section>
 
+      <!-- Referanslar -->
+      <section class="bolum" id="referanslar">
+        <div class="kapsayici">
+          <div class="bolum-baslik">
+            <h2>Referanslarımız</h2>
+            <p>Denetimini yaptığımız projelerden bazıları.</p>
+          </div>
+          <ul class="referans-liste">
+            <li>Bahçeşehir Evleri</li>
+            <li>Doruk Konutları</li>
+            <li>Elektrokent</li>
+            <li>Nova Garden</li>
+            <li>Park Evleri</li>
+            <li>Rönesans Evleri</li>
+            <li>Yıldız Park Evleri</li>
+          </ul>
+        </div>
+      </section>
+
       <!-- Denetim süreci -->
       <section class="bolum bolum-mavi" id="surec">
         <div class="kapsayici">
@@ -292,6 +311,13 @@
                 <div>
                   <strong>Adres</strong>
                   <span>Emek Mah. 30. Sokak No: 44/10<br />Çankaya / Ankara</span>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                <div>
+                  <strong>Çalışma Saatleri</strong>
+                  <span>Pazartesi – Cuma 08.30 – 18.00<br />Cumartesi 09.00 – 13.00</span>
                 </div>
               </li>
             </ul>
@@ -435,7 +461,7 @@
           const baslangic = performance.now();
           const say = (simdi) => {
             const oran = Math.min((simdi - baslangic) / 1200, 1);
-            g.target.textContent = Math.round(hedef * oran) + ek;
+            g.target.textContent = Math.round(hedef * oran).toLocaleString('tr-TR') + ek;
             if (oran < 1) requestAnimationFrame(say);
           };
           requestAnimationFrame(say);
